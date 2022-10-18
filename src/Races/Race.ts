@@ -4,7 +4,7 @@ export default abstract class Race {
     readonly dexterity: number,
   ) { }
 
-  static createdRacesInstance(): number {
+  static createdRacesInstances(): number {
     throw new Error('Not implemented');
   }
 
