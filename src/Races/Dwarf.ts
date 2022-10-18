@@ -3,21 +3,20 @@ import Race from './Race';
 export default class Dwarf extends Race {
   name: string;
   dexterity: number;
-  _createdRacesInstances: number;
+  static racesInstances: 0;
   maxLifePoints: number;
   constructor(name: string, maxLifePoints: number) {
     super(name, maxLifePoints);
     this.name = '';
     this.dexterity = 0;
-    this._createdRacesInstances = this.createdRacesInstances;
+    Dwarf.racesInstances += 1;
     this.maxLifePoints = 80;
   }
 
-  get createdRacesInstances(): number {
-    return this._createdRacesInstances;
-  }
-
-  set createdRacesInstances(value: number) {
-    this._createdRacesInstances = value;
+  static createdRacesInstances(): number {
+    if (Dwarf.racesInstances === 0) {
+      throw new Error('Not implemented');
+    }
+    return Dwarf.racesInstances;
   }
 } 
