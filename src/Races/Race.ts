@@ -1,3 +1,10 @@
 export default class Race {
-  constructor(private name: string, private dexterity: number) {}
+  constructor(
+    readonly name: string, 
+    readonly dexterity: number,
+  ) { }
+
+  static createdRacesInstance(): number {
+    throw new Error('Not implemented');
+  }
 }
