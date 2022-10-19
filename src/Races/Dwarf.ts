@@ -3,10 +3,10 @@ import Race from './Race';
 export default class Dwarf extends Race {
   name: string;
   dexterity: number;
-  static racesInstances: 0;
+  static racesInstances = 0;
   maxLifePoints: number;
-  constructor(name: string, maxLifePoints: number) {
-    super(name, maxLifePoints);
+  constructor(name: string, dexterity: number) {
+    super(name, dexterity);
     this.name = '';
     this.dexterity = 0;
     Dwarf.racesInstances += 1;
